@@ -80,7 +80,7 @@ jobs:
         go run make.go -v Windows
         go run make.go -v Windowsx86
         go run make.go -v DarwinBase
-        go run make.go -v linux/386
+        GOOS=linux GOARCH=386 go run make.go -v Linux
 
     - name: StoreBinaries
       uses: actions/upload-artifact@v1
